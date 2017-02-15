@@ -41,13 +41,17 @@
     width: 360px;
   }
 
-
   text-align: center;
   border-radius:4px;
   border:1px solid $lighten-grey;
   position: relative;
   box-shadow: 0 3px 8px $lighten-grey;
   margin-bottom: 50px;
+  transition: box-shadow 0.5s 0.5s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+
+  &:hover{
+    box-shadow: 0 4px 10px darken($lighten-grey,5%);
+  }
 
   &:before{
     @include pseudo-elem;

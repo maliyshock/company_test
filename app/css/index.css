@@ -470,7 +470,8 @@ th {
   border: 1px solid #f0f0f0;
   position: relative;
   box-shadow: 0 3px 8px #f0f0f0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  transition: box-shadow 0.5s 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); }
   @media (min-width: 600px) {
     .grid-item {
       width: calc(50% - 12px); } }
@@ -480,6 +481,8 @@ th {
   @media (min-width: 1200px) {
     .grid-item {
       width: 360px; } }
+  .grid-item:hover {
+    box-shadow: 0 4px 10px #e3e3e3; }
   .grid-item:before {
     content: '';
     position: absolute;
