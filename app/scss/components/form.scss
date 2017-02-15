@@ -1,0 +1,73 @@
+.form-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form__input-wrapper{
+  position: relative;
+
+  &:after{
+    @include pseudo-elem;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: transparentize($dark-blue, 0.5);
+  }
+}
+
+.form__input, .form__input-placeholder{
+  font-size: 20px;
+  @include heebo-reg;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form__input{
+  @include resetInput;
+  width: 330px;
+  color: $dark-blue;
+}
+
+.form__input-placeholder{
+  color: transparentize($dark-blue, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000),
+              color 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000),
+              font-size 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+.form__rubber-line{
+  height: 1px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  background-color: $blue;
+  z-index: 1;
+}
+
+.form__input{
+  &:focus, &.freeze{
+    & + .form__input-placeholder{
+      color: $blue;
+      transform: translate(0, -100%);
+      font-size: 14px;
+    }
+
+    & + .form__input-placeholder + .form__rubber-line{
+      width: 100%;
+    }
+  }
+
+}
+
+
+

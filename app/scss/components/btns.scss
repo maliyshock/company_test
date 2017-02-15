@@ -1,0 +1,14 @@
+.btn{
+  @include resetButton;
+  text-align: center;
+  min-width:160px;
+  padding: 7px 20px;
+  border:2px solid $blue;
+  border-radius:200px;
+}
+
+.btn__text{
+  font-size: 17px;
+  color: $blue;
+  line-height: 25px;
+}

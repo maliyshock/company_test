@@ -1,0 +1,22 @@
+$path-to-font : "../fonts/heebo/";
+
+@font-face {
+  font-family: 'heebo-light';
+  src: url('#{$path-to-fonts}Heebo-light.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'heebo-med';
+  src: url('#{$path-to-fonts}Heebo-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'heebo-reg';
+  src: url('#{$path-to-fonts}Heebo-regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
