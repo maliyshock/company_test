@@ -99,7 +99,7 @@
 }
 
 .gird-item__footer{
-  flex-grow: 0;
+  font-size: 0;
 }
 
 .grid-item__icon{
@@ -187,4 +187,6 @@
   padding-top: 9px;
   padding-bottom: 9px;
   border-top: 1px solid transparentize($grey,0.8);
+  position: relative;
+  top: 0;
 }
