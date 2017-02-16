@@ -5,10 +5,19 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-left:$grid-phone-paddings;
+  padding-right:$grid-phone-paddings;
+}
+.form{
+  width: 100%;
+  text-align: center;
 }
 
 .form__input-wrapper{
   position: relative;
+  display: inline-block;
+  max-width: 330px;
+  width: 100%;
 
   &:after{
     @include pseudo-elem;
@@ -24,12 +33,13 @@
   font-size: 20px;
   @include heebo-reg;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
 }
 
 .form__input{
   @include resetInput;
-  width: 330px;
+  max-width: 330px;
+  width: 100%;
   color: $dark-blue;
 }
 
@@ -38,6 +48,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  transform-origin: 0;
   transition: transform 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000),
               color 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000),
               font-size 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
@@ -58,8 +69,7 @@
   &:focus, &.freeze{
     & + .form__input-placeholder{
       color: $blue;
-      transform: translate(0, -100%);
-      font-size: 14px;
+      transform: translate(0, -30px) scale(0.7);
     }
 
     & + .form__input-placeholder + .form__rubber-line{

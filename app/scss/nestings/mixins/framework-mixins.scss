@@ -53,6 +53,10 @@
   &:focus{
     outline: none;
   }
+
+  &:required, &:invalid  {
+    box-shadow:none;
+  }
 }
 
 @mixin resetButton{
