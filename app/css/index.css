@@ -377,16 +377,8 @@ th {
   position: relative;
   display: inline-block;
   max-width: 330px;
-  width: 100%; }
-  .form__input-wrapper:after {
-    content: '';
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background-color: rgba(76, 99, 114, 0.5); }
+  width: 100%;
+  border-bottom: 1px solid rgba(76, 99, 114, 0.5); }
 
 .form__input, .form__input-placeholder {
   font-size: 20px;
@@ -417,7 +409,7 @@ th {
   width: 0;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   background-color: #2EA5F3;
   z-index: 1; }

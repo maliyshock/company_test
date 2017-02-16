@@ -18,15 +18,7 @@
   display: inline-block;
   max-width: 330px;
   width: 100%;
-
-  &:after{
-    @include pseudo-elem;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 100%;
-    background-color: transparentize($dark-blue, 0.5);
-  }
+  border-bottom:1px solid  transparentize($dark-blue, 0.5);
 }
 
 .form__input, .form__input-placeholder{
@@ -59,7 +51,7 @@
   width: 0;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   transition: width 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
   background-color: $blue;
   z-index: 1;
