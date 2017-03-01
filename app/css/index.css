@@ -549,8 +549,7 @@ th {
   max-width: 100%; }
 
 .gird-item__footer {
-  -ms-flex-positive: 0;
-      flex-grow: 0; }
+  font-size: 0; }
 
 .grid-item__icon {
   width: 75px;
@@ -623,7 +622,9 @@ th {
   display: block;
   padding-top: 9px;
   padding-bottom: 9px;
-  border-top: 1px solid rgba(151, 151, 151, 0.2); }
+  border-top: 1px solid rgba(151, 151, 151, 0.2);
+  position: relative;
+  top: 0; }
 
 body, html {
   height: 100%;
